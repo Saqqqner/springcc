@@ -8,5 +8,9 @@ public class MusicPlayer {
     public void playMusic(){
         System.out.println("Playing : " + music.getSongs());
     }
+    public MusicPlayer(){}
 
+    public void setMusic(Music music) {
+        this.music = music;
+    }
 }
