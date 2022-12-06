@@ -7,6 +7,7 @@ public class Man {
         this.name = name;
     }
 
+
     public String getName() {
         return name;
     }
