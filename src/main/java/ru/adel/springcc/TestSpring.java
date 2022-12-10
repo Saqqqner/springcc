@@ -11,7 +11,7 @@ public class TestSpring {
         musicPlayer.playMusic();
         context.close();
         System.out.println("Spasite men'ja!");
-
+        System.out.println("Sammm");
 
 
     }
