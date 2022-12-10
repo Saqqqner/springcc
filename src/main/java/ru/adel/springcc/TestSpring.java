@@ -14,5 +14,10 @@ public class TestSpring {
         System.out.println("Sammm");
 
 
+
+        System.out.println("Samui krutoy");
+
+
+
     }
 }
