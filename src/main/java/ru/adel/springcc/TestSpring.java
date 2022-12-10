@@ -10,12 +10,6 @@ public class TestSpring {
         MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
         musicPlayer.playMusic();
         context.close();
-        System.out.println("Spasite men'ja!");
-        System.out.println("Sammm");
-
-
-
-        System.out.println("Samui krutoy");
 
 
 
