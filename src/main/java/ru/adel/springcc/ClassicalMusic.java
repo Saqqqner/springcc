@@ -6,4 +6,9 @@ public class ClassicalMusic implements Music{
         return "Sirena";
 
     }
+public void doMyInit(){
+    System.out.println("Initmethod!");}
+public void doMyDestr(){
+    System.out.println("destroy");
+}
 }

@@ -9,25 +9,29 @@
     <context:property-placeholder location="musicPlayer.properties"/>
 
     <bean id="musicBean"
-          class="ru.adel.springcc.ClassicalMusic">
+          class="ru.adel.springcc.ClassicalMusic"
+    init-method="doMyInit"
+    destroy-method="doMyDestr">
     </bean>
-    <bean id="musicBean1"
-          class="ru.adel.springcc.RapMusic">
-    </bean>
-    <bean id="musicBean2"
-          class="ru.adel.springcc.Jazz">
-    </bean>
+<!--    <bean id="musicBean1"-->
+<!--          class="ru.adel.springcc.RapMusic">-->
+<!--    </bean>-->
+<!--    <bean id="musicBean2"-->
+<!--          class="ru.adel.springcc.Jazz">-->
+<!--    </bean>-->
     <bean id="musicPlayer"
-    class="ru.adel.springcc.MusicPlayer">
-        <property name="musicList">
-            <list>
-                <ref bean="musicBean"/>
-                <ref bean="musicBean1"/>
-                <ref bean="musicBean2"/>
-            </list>
-        </property>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    class="ru.adel.springcc.MusicPlayer"
+    scope="prototype">
+            </bean>
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="musicBean"/>-->
+<!--                <ref bean="musicBean1"/>-->
+<!--                <ref bean="musicBean2"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="name" value="${musicPlayer.name}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+<!--    </bean>-->
 
 </beans>
