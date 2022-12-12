@@ -10,6 +10,7 @@
 
     <bean id="musicBean"
           class="ru.adel.springcc.ClassicalMusic"
+
     init-method="doMyInit"
     destroy-method="doMyDestr">
     </bean>
@@ -19,10 +20,10 @@
 <!--    <bean id="musicBean2"-->
 <!--          class="ru.adel.springcc.Jazz">-->
 <!--    </bean>-->
-    <bean id="musicPlayer"
-    class="ru.adel.springcc.MusicPlayer"
-    scope="prototype">
-            </bean>
+<!--   <bean id="musicPlayer"-->
+<!--    class="ru.adel.springcc.MusicPlayer"-->
+<!--    scope="prototype">-->
+<!--            </bean>-->
 <!--        <property name="musicList">-->
 <!--            <list>-->
 <!--                <ref bean="musicBean"/>-->
