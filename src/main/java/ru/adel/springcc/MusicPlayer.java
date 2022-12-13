@@ -1,56 +1,20 @@
 package ru.adel.springcc;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class MusicPlayer {
-    private List<Music> musicList = new ArrayList<>();
     private Music music;
-    private String name;
-    private int volume;
-
-    public void setMusicList(List<Music> musicList) {
-        this.musicList = musicList;
-    }
-
-    @Override
-    public String toString() {
-        return "MusicPlayer{" +
-                "music=" + music +
-                ", name='" + name + '\'' +
-                ", volume=" + volume +
-                '}';
-    }
-
-    public void setMusic(Music music) {
-        this.music = music;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
+   @Autowired
     public MusicPlayer(Music music){
         this.music = music;
     }
     public void playMusic(){
-        for (Music music:musicList){
             System.out.println("Playing : " + music.getSongs());
-        }
     }
     public MusicPlayer(){}
-
 
 }

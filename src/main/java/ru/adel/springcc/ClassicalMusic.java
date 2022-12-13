@@ -1,6 +1,9 @@
 package ru.adel.springcc;
 
+import org.springframework.stereotype.Component;
+
 public class ClassicalMusic implements Music{
+
     @Override
     public String getSongs(){
         return "Sirena";
