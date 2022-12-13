@@ -7,14 +7,20 @@ import java.util.ArrayList;
 import java.util.List;
 @Component
 public class MusicPlayer {
-    private Music music;
-   @Autowired
-    public MusicPlayer(Music music){
-        this.music = music;
+    @Autowired
+    private RapMusic rapMusic;
+    @Autowired
+    private ClassicalMusic classicalMusic;
+
+
+
+    public void playRapMusic(){
+            System.out.println("Playing : " +rapMusic.getSongs());
     }
-    public void playMusic(){
-            System.out.println("Playing : " + music.getSongs());
+    public void playClassMusic(){
+        System.out.println("Playing : " +classicalMusic.getSongs());
     }
+
     public MusicPlayer(){}
 
 }
