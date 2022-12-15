@@ -1,5 +1,7 @@
 package ru.adel.springcc;
 
+import java.util.List;
+
 public interface Music {
-    String getSongs();
+    List<String> getSongs();
 }

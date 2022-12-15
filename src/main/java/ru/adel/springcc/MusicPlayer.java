@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 @Component
 public class MusicPlayer {
     private RapMusic rapMusic;
@@ -21,8 +23,16 @@ public class MusicPlayer {
 
 
 
-public String playMusic(){
-        return "Playing :"+"\n" + rapMusic.getSongs() +"\n" +  jazz.getSongs() + "\n" + classicalMusic.getSongs();
+public void playMusic(MusicGenre musicGenre){
+    Random random = new Random();
+    int rNumber = random.nextInt(3);
+    if(musicGenre==MusicGenre.CLASSICAL) {
+        System.out.println(classicalMusic.getSongs().get(rNumber));
+    } else if (musicGenre==MusicGenre.RAP) {
+        System.out.println(rapMusic.getSongs().get(rNumber));
+    }else {
+        System.out.println(jazz.getSongs().get(rNumber));
+    }
 }
 
     public MusicPlayer(){}
