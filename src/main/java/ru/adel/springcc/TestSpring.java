@@ -1,14 +1,18 @@
 package ru.adel.springcc;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.text.Annotation;
 
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConf.class
+        );
         MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
-        musicPlayer.playMusic(MusicGenre.CLASSICAL);
-        musicPlayer.playMusic(MusicGenre.JAZZ);
-        musicPlayer.playMusic(MusicGenre.RAP);
+        System.out.println(musicPlayer.playMusic());
+        context.close();
 
     }
 }
